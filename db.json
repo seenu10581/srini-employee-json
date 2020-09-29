@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "name": "Karthick",
+      "employeeCode": "202001",
+      "age": "35",
+      "salary": "500000",
+      "id": 1
+    },
+    {
+      "name": "Senthil",
+      "employeeCode": "202002",
+      "age": "32",
+      "salary": "600000",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "employeeCode": "202003",
+      "age": "33",
+      "salary": "550000",
+      "id": 3
+    },
+    {
+      "name": "Selvam",
+      "employeeCode": "202004",
+      "age": "42",
+      "salary": "700000",
+      "id": 4
+    }
+  ]
+}

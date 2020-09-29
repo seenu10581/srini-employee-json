@@ -1,0 +1,49 @@
+<div id="container">
+   <div id="content">
+      <div> Employee Add / Edit</div>
+         <div>
+            <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+               <table>
+               <tr>
+                  <td>Name</td> <td>
+                     <input type="text" formControlName="name"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Employee Code</td> <td>
+                        <input type="text" formControlName="employeeCode"/>
+
+                        <div *ngIf="employeeForm.controls.employeeCode.invalid && (employeeForm.controls.employeeCode.dirty || employeeForm.controls.employeeCode.touched)"
+                           class="alert alert-danger">
+                           <div *ngIf="employeeForm.controls.employeeCode.errors.required">
+                              Employee Code is required.
+                           </div>
+                           <div *ngIf="employeeForm.controls.employeeCode.errors.employeeCodeTaken">
+                              Employee Code is Already Taken!...
+                           </div>
+                        </div>
+                     </td>
+               </tr>
+               <tr>
+                  <td>Age</td> 
+                  <td>
+                     <input type="text" formControlName="age"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Salary</td>   
+                  <td>
+                     <input type="text" formControlName="salary"/>
+                  </td>           
+               </tr>
+               <tr>
+                  <td colspan="2" style="text-align:center">
+                     <button class="btn" ><span>Save</span></button> &nbsp;
+                     <button class="btn" (click)="redirectToViewPage()"><span>Cancel</span></button>
+                  </td>           
+               </tr>
+            </table>   
+         </form>  
+      </div>
+   </div>
+</div>
